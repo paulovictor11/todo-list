@@ -1,28 +1,59 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+    <div id="app">
+        <section class="hero is-primary is-bold is-fullheight">
+
+            <div class="hero-head">
+                <nav class="navbar">
+                    <div class="container">
+                        <div class="navbar-brand">
+                            <a class="navbar-item">VueJs Tutorial 1.0</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <div class="row">
+                        <div class="columns">
+                            <div class="column is-half is-offset-one-quarter">
+                                <TodoCard></TodoCard>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-foot">
+                <div class="container">
+                    <div class="content has-text-centered">
+                        <p>
+                            <strong>VueJs Tutorial</strong> by Paulo Victor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+    import TodoCard from "./components/TodoCard";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+    export default {
+        name: 'app',
+        components: {
+          TodoCard
+        },
+        data () {
+            return {
+                msg: 'Hello, World!'
+            }
+        }
+    }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
